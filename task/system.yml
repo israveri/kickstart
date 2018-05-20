@@ -1,0 +1,20 @@
+---
+- name: system | Update cache
+  become: true
+  pacman:
+    update_cache: yes
+
+- name: system | Install basic packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - base-devel
+    - feh
+    - adobe-source-code-pro-fonts
+    - imagemagick
+    - readline
+    - the_silver_searcher
+    - openssh
+    - zsh

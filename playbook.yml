@@ -1,9 +1,7 @@
 ---
 - hosts: local
-  become: true
 
   vars:
 
   tasks:
-    - name: Pings the machine
-      ping:
+    - include: task/system.yml    tags=system
