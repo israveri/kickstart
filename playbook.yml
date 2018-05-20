@@ -1,0 +1,9 @@
+---
+- hosts: local
+  become: true
+
+  vars:
+
+  tasks:
+    - name: Pings the machine
+      ping:
