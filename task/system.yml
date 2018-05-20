@@ -18,3 +18,10 @@
     - the_silver_searcher
     - openssh
     - zsh
+
+- name: system | Install AUR helper
+  become: true
+  aur:
+    name: aurman
+    dir: "{{ download_dir }}"
+    user: "{{ user }}"
