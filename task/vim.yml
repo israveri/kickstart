@@ -1,0 +1,24 @@
+---
+- name: vim | Install vim
+  become: true
+  pacman:
+    name: vim
+    state: latest
+
+- name: vim | Install vundle
+  git:
+    repo: "{{ vundle_repo }}"
+    dest: "{{ vundle_path }}"
+
+- name: vim | Symlink dotfiles
+  file:
+    src: "{{ dotfiles_dir }}/{{ item }}"
+    dest: "{{ home }}/.{{ item }}"
+    state: link
+    force: yes
+    follow: no
+  with_items:
+    - vimrc
+
+- name: vim | Install plugins
+  command: vim +PluginInstall! +qall

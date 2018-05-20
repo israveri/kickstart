@@ -7,3 +7,4 @@
   tasks:
     - include: task/system.yml    tags=system
     - include: task/shell.yml     tags=shell
+    - include: task/vim.yml       tags=vim
