@@ -1,13 +1,9 @@
 ---
 - hosts: local
 
-  vars:
-    home: "{{ ansible_env.HOME }}"
-    user: "{{ ansible_env.USER }}"
-    download_dir: "{{ home }}/Downloads"
-
   vars_files:
-  - config/vars.yml
+    - config/vars.yml
 
   tasks:
     - include: task/system.yml    tags=system
+    - include: task/shell.yml     tags=shell

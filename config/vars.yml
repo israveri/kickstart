@@ -1,1 +1,12 @@
 ---
+shell: "/usr/bin/zsh"
+home:  "{{ ansible_env.HOME }}"
+user:  "{{ ansible_env.USER }}"
+download_dir: "{{ home }}/Downloads"
+dotfiles_dir: "{{ playbook_dir }}/dotfiles"
+
+antigen_repo: https://github.com/zsh-users/antigen.git
+antigen_dir: "{{ home }}/.antigen"
+
+base16_shell_repo: https://github.com/chriskempson/base16-shell.git
+base16_dest_dir: "{{ home }}/.base16/shell"

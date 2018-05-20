@@ -1,0 +1,33 @@
+---
+- name: shell | Install zsh
+  become: true
+  pacman:
+    name: zsh
+    state: latest
+
+- name: shell | Install base16-shell
+  git:
+    repo: "{{ base16_shell_repo }}"
+    dest: "{{ base16_dest_dir }}"
+
+- name: shell | Install antigen
+  git:
+    repo: "{{ antigen_repo }}"
+    dest: "{{ antigen_dir }}"
+
+- name: shell | Symlink dotfiles
+  file:
+    src: "{{ dotfiles_dir }}/{{ item }}"
+    dest: "{{ home }}/.{{ item }}"
+    state: link
+    force: yes
+    follow: no
+  with_items:
+    - alias
+    - zshrc
+
+- name: shell | Change zsh to default
+  become: yes
+  user:
+    name: "{{ user }}"
+    shell: "{{ shell }}"

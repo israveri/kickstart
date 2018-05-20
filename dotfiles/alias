@@ -1,0 +1,21 @@
+# system
+alias reload="source $HOME/.zshrc && echo 'Shell reloaded. :)'"
+alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+alias sysupdate="sudo pacman -Syu"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias grep="grep --color=always"
+alias ls="ls -lh --color=always"
+alias lsa="ls -alh --color=always"
+
+# bundler
+alias be="bundle exec"
+alias bi="bundle install"
+alias bl="bundle list"
+alias bo="bundle open"
+alias bu="bundle update"
+
+# ansible
+alias ans="ansible"
+alias ansp="ansible-playbook"
