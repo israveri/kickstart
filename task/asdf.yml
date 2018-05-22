@@ -1,0 +1,31 @@
+---
+- name: asdf | Install asdf manager
+  become: true
+  aur:
+    name: asdf
+    dir: "{{ download_dir }}"
+    user: "{{ user }}"
+
+- name: asdf | Install Ruby plugin
+  command: "asdf plugin-add ruby {{ ruby_plugin_repo }}"
+
+- name: asdf | Install Node plugin
+  command: "asdf plugin-add node {{ node_plugin_repo }}"
+
+- name: asdf | Install Python plugin
+  command: "asdf plugin-add python {{ python_plugin_repo }}"
+
+- name: asdf | Install Rust plugin
+  command: "asdf plugin-add rust {{ rust_plugin_repo }}"
+
+- name: asdf | Install Go plugin
+  command: "asdf plugin-add go {{ go_plugin_repo }}"
+
+- name: asdf | Install Erlang plugin
+  command: "asdf plugin-add erlang {{ erlang_plugin_repo }}"
+
+- name: asdf | Install Elixir plugin
+  command: "asdf plugin-add elixir {{ elixir_plugin_repo }}"
+
+- name: asdf | Install Clojure plugin
+  command: "asdf plugin-add clojure {{ clojure_plugin_repo }}"
