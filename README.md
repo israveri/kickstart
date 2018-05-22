@@ -12,6 +12,8 @@ My dev machines orchestrations seemed like a great excuse to try [**Ansible**](h
 
 ## Running
 
+**Obs**.: This script assumes **Arch Linux** and will break running on any other distro as it uses both pacman (Arch's package manager) and aur (Arch's User Repository for community packages) modules.
+
 To setup the machine, just run the setup script:
 
     $ ./setup
