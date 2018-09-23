@@ -25,3 +25,17 @@
     name: aurman
     dir: "{{ download_dir }}"
     user: "{{ user }}"
+
+- name: System | Symlinking dotfiles
+  file:
+    src: "{{ dotfiles_dir }}/{{ item }}"
+    dest: "{{ home }}/.{{ item }}"
+    state: link
+    force: yes
+    follow: no
+  with_items:
+    - gemrc
+    - irbrc
+    - pryrc
+    - railsrc
+    - rspecrc
