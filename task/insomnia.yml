@@ -1,0 +1,10 @@
+---
+- name: Insomnia | Downloading AppImage
+  get_url:
+    url: "https://builds.insomnia.rest/downloads/linux/latest"
+    dest: "{{ download_dir }}/insomnia"
+    mode: 0744
+
+- name: Insomnia | Move to local binary path
+  become: true
+  command: mv "{{ download_dir }}/insomnia" /usr/local/bin
