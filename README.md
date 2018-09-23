@@ -10,6 +10,13 @@ Always wanted to learn IT automation tools beyond my surface level knowledge.
 
 My dev machines orchestrations seemed like a great excuse to try [**Ansible**](https://www.ansible.com).
 
+## Requirements
+
+You'll need to install the following packages prior to running the setup script:
+
+ * ansible
+ * python
+
 ## Running
 
 **Obs**.: This script assumes **Arch Linux** and will break running on any other distro as it uses both pacman (Arch's package manager) and aur (Arch's User Repository for community packages) modules.
