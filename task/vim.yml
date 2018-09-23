@@ -1,16 +1,16 @@
 ---
-- name: vim | Install vim
+- name: vim | Installing vim
   become: true
   pacman:
     name: vim
     state: latest
 
-- name: vim | Install vundle
+- name: vim | Installing vundle
   git:
-    repo: "{{ vundle_repo }}"
-    dest: "{{ vundle_path }}"
+    repo: "https://github.com/gmarik/Vundle.vim.git"
+    dest: "{{ home }}/.vim/bundle/Vundle.vim"
 
-- name: vim | Symlink dotfiles
+- name: vim | Symlinking dotfiles
   file:
     src: "{{ dotfiles_dir }}/{{ item }}"
     dest: "{{ home }}/.{{ item }}"
@@ -20,5 +20,5 @@
   with_items:
     - vimrc
 
-- name: vim | Install plugins
+- name: vim | Installing plugins
   command: vim +PluginInstall! +qall

@@ -1,14 +1,14 @@
 ---
 - name: Overmind | Downloading file
   get_url:
-    url: "{{ overmind_release_url }}"
+    url: "https://github.com/DarthSim/overmind/releases/download/v2.0.0.beta1/overmind-v2.0.0.beta1-linux-amd64.gz"
     dest: "{{ download_dir }}/overmind.gz"
     mode: 0744
 
-- name: Overmind | Moving to /usr/local/bin
+- name: Overmind | Moving to local binaries path
   become: true
-  command: mv "{{ download_dir }}/overmind.gz" /usr/local/bin
+  command: mv "{{ download_dir }}/overmind.gz" "{{ local_binaries_path }}"
 
 - name: Overmind | Decompressing file
   become: true
-  command: "gunzip /usr/local/bin/overmind.gz"
+  command: "gunzip {{ local_binaries_path }}/overmind.gz"

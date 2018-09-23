@@ -1,10 +1,10 @@
 ---
-- name: system | Update cache
+- name: System | Updating cache
   become: true
   pacman:
     update_cache: yes
 
-- name: system | Install basic packages
+- name: System | Installing basic packages
   become: true
   pacman:
     name: "{{ item }}"
@@ -19,7 +19,7 @@
     - openssh
     - zsh
 
-- name: system | Install AUR helper
+- name: System | Installing AUR helper
   become: true
   aur:
     name: aurman

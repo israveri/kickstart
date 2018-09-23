@@ -1,31 +1,31 @@
 ---
-- name: asdf | Install asdf manager
+- name: asdf | Installing
   become: true
   aur:
     name: asdf
     dir: "{{ download_dir }}"
     user: "{{ user }}"
 
-- name: asdf | Install Ruby plugin
-  command: "asdf plugin-add ruby {{ ruby_plugin_repo }}"
+- name: asdf | Installing Ruby plugin
+  command: "asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git"
 
-- name: asdf | Install Node plugin
-  command: "asdf plugin-add node {{ node_plugin_repo }}"
+- name: asdf | Installing Node plugin
+  command: "asdf plugin-add node https://github.com/asdf-vm/asdf-nodejs.git"
 
-- name: asdf | Install Python plugin
-  command: "asdf plugin-add python {{ python_plugin_repo }}"
+- name: asdf | Installing Python plugin
+  command: "asdf plugin-add python https://github.com/tuvistavie/asdf-python.git"
 
-- name: asdf | Install Rust plugin
-  command: "asdf plugin-add rust {{ rust_plugin_repo }}"
+- name: asdf | Installing Rust plugin
+  command: "asdf plugin-add rust https://github.com/code-lever/asdf-rust.git"
 
-- name: asdf | Install Go plugin
-  command: "asdf plugin-add go {{ go_plugin_repo }}"
+- name: asdf | Installing Go plugin
+  command: "asdf plugin-add go https://github.com/kennyp/asdf-golang.git"
 
-- name: asdf | Install Erlang plugin
-  command: "asdf plugin-add erlang {{ erlang_plugin_repo }}"
+- name: asdf | Installing Erlang plugin
+  command: "asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git"
 
-- name: asdf | Install Elixir plugin
-  command: "asdf plugin-add elixir {{ elixir_plugin_repo }}"
+- name: asdf | Installing Elixir plugin
+  command: "asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git"
 
-- name: asdf | Install Clojure plugin
-  command: "asdf plugin-add clojure {{ clojure_plugin_repo }}"
+- name: asdf | Installing Clojure plugin
+  command: "asdf plugin-add clojure https://github.com/vic/asdf-clojure.git"
