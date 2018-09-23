@@ -1,0 +1,14 @@
+---
+- name: Overmind | Downloading file
+  get_url:
+    url: "{{ overmind_release_url }}"
+    dest: "{{ download_dir }}/overmind.gz"
+    mode: 0744
+
+- name: Overmind | Moving to /usr/local/bin
+  become: true
+  command: mv "{{ download_dir }}/overmind.gz" /usr/local/bin
+
+- name: Overmind | Decompressing file
+  become: true
+  command: "gunzip /usr/local/bin/overmind.gz"

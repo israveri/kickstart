@@ -5,7 +5,8 @@
     - config/vars.yml
 
   tasks:
-    - include: task/system.yml    tags=system
-    - include: task/shell.yml     tags=shell
-    - include: task/vim.yml       tags=vim
-    - include: task/asdf.yml      tags=asdf
+    - include: task/system.yml    tags=base
+    - include: task/shell.yml     tags=base
+    - include: task/vim.yml       tags=base
+    - include: task/asdf.yml      tags=base
+    - include: task/overmind.yml  tags=applications
