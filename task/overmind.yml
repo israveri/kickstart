@@ -7,8 +7,8 @@
 
 - name: Overmind | Moving to local binaries path
   become: true
-  command: mv "{{ download_dir }}/overmind.gz" "{{ local_binaries_path }}"
+  command: mv "{{ download_dir }}/overmind.gz" "{{ local_binary_path }}"
 
 - name: Overmind | Decompressing file
   become: true
-  command: "gunzip {{ local_binaries_path }}/overmind.gz"
+  command: "gunzip {{ local_binary_path }}/overmind.gz"

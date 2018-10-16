@@ -7,4 +7,4 @@
 
 - name: Insomnia | Move to local binary path
   become: true
-  command: mv "{{ download_dir }}/insomnia" "{{ local_binaries_path }}"
+  command: mv "{{ download_dir }}/insomnia" "{{ local_binary_path }}"
