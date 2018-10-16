@@ -7,17 +7,8 @@
 - name: System | Installing basic packages
   become: true
   pacman:
-    name: "{{ item }}"
+    name: ['base-devel', 'feh', 'adobe-source-code-pro-fonts', 'imagemagick', 'readline', 'the_silver_searcher', 'openssh', 'zsh', 'ttf-dejavu', 'redis', 'postgresql', 'mariadb']
     state: latest
-  with_items:
-    - base-devel
-    - feh
-    - adobe-source-code-pro-fonts
-    - imagemagick
-    - readline
-    - the_silver_searcher
-    - openssh
-    - zsh
 
 - name: System | Installing AUR helper
   become: true
@@ -39,3 +30,6 @@
     - pryrc
     - railsrc
     - rspecrc
+    - default-gems
+    - gitconfig
+    - tmux.conf
