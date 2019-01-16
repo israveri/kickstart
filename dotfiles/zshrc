@@ -46,3 +46,7 @@ source ~/.alias
 
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# ASDF
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
