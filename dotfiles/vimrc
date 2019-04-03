@@ -6,7 +6,8 @@ call vundle#begin('~/.vim/plugins')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
+Plugin 'danielwe/base16-vim'
 Plugin 'daviesjamie/vim-base16-lightline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-endwise'
