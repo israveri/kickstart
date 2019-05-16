@@ -2,3 +2,5 @@ bundler
 awesome_print
 pry
 pry-byebug
+solargraph
+rubocop
