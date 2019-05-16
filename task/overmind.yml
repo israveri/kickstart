@@ -1,4 +1,10 @@
 ---
+- name: Overmind | Removing installed binaries
+  become: true
+  file:
+   path: "{{ local_binary_path }}/overmind"
+   state: absent
+
 - name: Overmind | Downloading file
   get_url:
     url: "https://github.com/DarthSim/overmind/releases/download/v2.0.0.beta1/overmind-v2.0.0.beta1-linux-amd64.gz"
