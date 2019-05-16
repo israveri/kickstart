@@ -33,3 +33,11 @@
     - default-gems
     - gitconfig
     - tmux.conf
+
+- name: System | Symlinking VSCode settings
+  file:
+    src: "{{ dotfiles_dir }}/settings.json"
+    dest: "{{ home }}/.config/Code - OSS/User/settings.json"
+    state: link
+    force: yes
+    follow: no

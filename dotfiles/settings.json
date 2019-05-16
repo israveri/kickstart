@@ -1,0 +1,22 @@
+{
+  // Explorer
+  "explorer.openEditors.visible": 0,
+
+  // Workbench
+  "workbench.colorTheme": "Solarized Light",
+  "workbench.sideBar.location": "right",
+
+  // Editor
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Source Code Pro Regular', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+
+  // Emmet
+  "emmet.includeLanguages": { "erb": "html" },
+
+  // Solargraph
+  "solargraph.commandPath": "/home/israel/.asdf/shims/solargraph",
+  "solargraph.hover": true,
+  "solargraph.diagnostics": true,
+}
