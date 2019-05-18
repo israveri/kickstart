@@ -11,6 +11,9 @@
   "editor.fontFamily": "'Source Code Pro Regular', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
+  
+  // Files
+  "files.insertFinalNewline": true,
 
   // Emmet
   "emmet.includeLanguages": { "erb": "html" },
