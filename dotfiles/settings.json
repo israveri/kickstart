@@ -11,7 +11,8 @@
   "editor.fontFamily": "'Source Code Pro Regular', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
-  
+  "files.trimTrailingWhitespace": true,
+
   // Files
   "files.insertFinalNewline": true,
 
