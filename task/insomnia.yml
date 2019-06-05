@@ -1,7 +1,13 @@
 ---
+- name: Insomnia | Removing installed binaries
+  become: true
+  file:
+   path: "{{ local_binary_path }}/insomnia"
+   state: absent
+
 - name: Insomnia | Downloading AppImage
   get_url:
-    url: "https://builds.insomnia.rest/downloads/linux/latest"
+    url: "https://updates.insomnia.rest/downloads/linux/latest"
     dest: "{{ download_dir }}/insomnia"
     mode: 0744
 
